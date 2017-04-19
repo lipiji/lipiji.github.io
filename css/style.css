@@ -1,0 +1,11 @@
+body
+{
+	margin: 0px auto;
+	background-color:white;
+	width:700px;
+	text-align:justify;
+}
+
+li {
+   margin:0 0 10px 0;   
+}
