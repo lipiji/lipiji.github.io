@@ -9,3 +9,7 @@ body
 li {
    margin:0 0 10px 0;   
 }
+
+#footer {
+	text-align: center;
+}
