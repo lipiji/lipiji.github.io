@@ -1,3 +1,3 @@
 Piji's Homepage
 ================
-- [lipiji.com](lipiji.com)
+- [lipiji.com](http://www.lipiji.com)
