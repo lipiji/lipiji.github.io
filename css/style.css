@@ -1,9 +1,17 @@
 body
 {
+	font-family: cambria, calibri, garamond, century, gulim, dotum, arial;
 	margin: 0px auto;
 	background-color:white;
-	width:711px;
-	text-align:justify;
+	/*width:711px;*/
+	text-align:justify;	
+        /*font-size: 18px;*/
+        width: 90%;
+        min-width: 200px;
+        max-width: 1200px;
+        width: expression_r(Math.max(200, Math.min(1200, document.body.offsetWidth-40)) + "px");
+    }
+</style>
 }
 
 
