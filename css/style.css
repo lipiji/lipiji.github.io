@@ -1,15 +1,15 @@
 body
 {
-	font-family: cambria, calibri, garamond, century, gulim, dotum, arial;
+	/*font-family: cambria, calibri, garamond, century, gulim, dotum, arial;*/
 	margin: 0px auto;
 	background-color:white;
 	/*width:711px;*/
 	text-align:justify;	
-    font-size: 18px;
+    /*font-size: 18px;*/
     width: 90%;
     min-width: 200px;
-    max-width: 1000px;
-    width: expression_r(Math.max(200, Math.min(1000, document.body.offsetWidth-40)) + "px");
+    max-width: 900px;
+    width: expression_r(Math.max(200, Math.min(900, document.body.offsetWidth-40)) + "px");
 }
 
 ul {
