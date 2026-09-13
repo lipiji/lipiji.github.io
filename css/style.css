@@ -20,6 +20,13 @@ li {
 	margin:0 0 10px 0;   
 }
 
+/* Slightly tighter item spacing for Research Interests, News, and Working
+   Experience. These are the first three lists directly inside #container; the
+   Publications list and every later list keep the default 10px spacing. */
+#container > ul:nth-of-type(-n+3) > li {
+	margin-bottom: 7px;
+}
+
 #footer {
 	text-align: center;
 }
