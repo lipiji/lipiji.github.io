@@ -82,6 +82,7 @@ li > ul > li {
 .news-pagination:not([hidden]) {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     margin-top: 14px;
     font-size: 0.875em;
