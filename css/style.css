@@ -1,34 +1,119 @@
-body
-{
-	/*font-family: cambria, calibri, garamond, century, gulim, dotum, arial;*/
-	margin: 0px auto;
-	background-color:white;
-	/*width:711px;*/
-	text-align:justify;	
-    /*font-size: 18px;*/
+body {
+    margin: 0 auto;
+    padding: 28px 0 40px;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.5;
+    text-align: justify;
     width: 90%;
-    min-width: 200px;
     max-width: 900px;
-    width: expression_r(Math.max(200, Math.min(900, document.body.offsetWidth-40)) + "px");
+    overflow-wrap: break-word;
+}
+
+#header h1 {
+    margin: 0 0 12px;
+    line-height: 1.25;
+}
+
+#header p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+h3 {
+    margin: 0 0 12px;
+    line-height: 1.35;
+}
+
+p {
+    margin: 12px 0;
+}
+
+hr {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid #e2e2e2;
+}
+
+a {
+    color: #245a91;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #245a91;
+    outline-offset: 3px;
 }
 
 ul {
-	margin:5px;
+    margin: 8px 0;
+    padding-left: 24px;
+    text-align: left;
 }
 
 li {
-	margin:0 0 10px 0;   
+    margin: 0 0 10px;
 }
 
 /* Slightly tighter item spacing for Research Interests, News, and Working
    Experience. These are the first three lists directly inside #container; the
    Publications list and every later list keep the default 10px spacing. */
 #container > ul:nth-of-type(-n+3) > li {
-	margin-bottom: 7px;
+    margin-bottom: 4px;
+}
+
+li > ul {
+    margin: 6px 0 0;
+}
+
+li > ul > li {
+    margin-bottom: 4px;
+}
+
+#news-heading {
+    scroll-margin-top: 20px;
+}
+
+.news-pagination:not([hidden]) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+    font-size: 0.875em;
+}
+
+.news-pagination button {
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+    color: #245a91;
+    font: inherit;
+    cursor: pointer;
+}
+
+.news-pagination button:hover:not(:disabled) {
+    border-color: #245a91;
+}
+
+.news-pagination button:disabled {
+    color: #999;
+    cursor: default;
+}
+
+#news-page-status {
+    color: #666;
+    font-variant-numeric: tabular-nums;
 }
 
 #footer {
 	text-align: center;
+    color: #666;
 }
 
 #left {
@@ -37,4 +122,27 @@ li {
 
 #right {
 	float:left;
+}
+
+@media (max-width: 600px) {
+    body {
+        width: auto;
+        margin: 0 20px;
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    .news-pagination button {
+        min-height: 40px;
+    }
+}
+
+@media print {
+    #news-list > li[hidden] {
+        display: list-item;
+    }
+
+    #news-pagination {
+        display: none;
+    }
 }

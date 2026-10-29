@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Piji Li" />
 	<meta name="keywords" content="Natural Language Processing, Summarization, Generation, Dialogue Systems, Piji Li, LpNorm, 李丕绩, 丕子, 自然语言处理" />
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script src="./js/news.js" defer></script>
     <title>Piji Li - Homepage</title>
   </head>
 
@@ -15,11 +17,11 @@
     <!-- HEADER -->
     <div id="header">
 		<h1>Piji Li (李丕绩)</h1>
-		<p>Professor</br>
-		College of Computer Science and Technology,</br>
-		Nanjing University of Aeronautics and Astronautics,</br>
-	    Room 109B, D12-A Building, Jiangjun Rd. Campus</br>
-		Email: lipiji.pz AT gmail.com, [<a href="https://scholar.google.com/citations?user=88ZlyicAAAAJ&hl=en" target="_blank">Google Scholar</a>], [<a href="http://github.com/lipiji" target="_blank">Github<a/>], [<a href="https://weibo.com/pagecn" target="_blank">Weibo<a/>] </p>
+		<p>Professor<br>
+		College of Computer Science and Technology,<br>
+		Nanjing University of Aeronautics and Astronautics,<br>
+	    Room 109B, D12-A Building, Jiangjun Rd. Campus<br>
+		Email: lipiji.pz AT gmail.com, [<a href="https://scholar.google.com/citations?user=88ZlyicAAAAJ&hl=en" target="_blank">Google Scholar</a>], [<a href="http://github.com/lipiji" target="_blank">Github</a>], [<a href="https://weibo.com/pagecn" target="_blank">Weibo</a>] </p>
     </div>
 	
 	<div id="container">
@@ -45,8 +47,8 @@
 		</p>
 		
 		<hr>
-		<h3>News</h3>
-			<ul>
+		<h3 id="news-heading">News</h3>
+			<ul id="news-list" aria-labelledby="news-heading" data-page-size="20">
                 <li>
 					Aug. 2026: Seven papers (4 main + 3 Findings) got accepted to EMNLP 2026.
 				</li>
@@ -140,7 +142,6 @@
 				<li>
 					Aug. 2022: Invited talk about Dialogue Generation at SMP2022-Socialbot Workshop.
 				</li>
-                <!--
 				<li>
 					Aug. 2022: Two papers got accepted to COLING2022 as oral presentation.
 				</li>
@@ -173,7 +174,7 @@
 				</li>
         		<li>
           			Nov. 2021: A talk about Trustworthy Natural Language Processing on the NUAA-MMU AI Workshop. [<a href="./slides/TrustNLP.pdf" target="_blank">slides</a>]
-        		</i>
+				</li>
 				<li>
 					Jun. 2021: Invited to serve as the Action Editor of ACL Rolling Review (ARR).
 				</li>
@@ -223,8 +224,6 @@
 				<li>
 					Apr. 2020: Two papers got accepted to ACL2020.
 				</li>
-				-->
-                <!--
 				<li>
 					Mar. 2020: Invited to serve as the summarization track <b>Area Chair</b> for EMNLP 2020.
 				</li>
@@ -289,9 +288,13 @@
 				<li>
 					Nov. 2016. One paper was accepted by AAAI 2017.
 				</li>
-				-->
 			
 			</ul>
+			<nav id="news-pagination" class="news-pagination" aria-label="News pagination" hidden>
+				<button id="news-previous" type="button" aria-controls="news-list">Previous</button>
+				<span id="news-page-status" role="status" aria-live="polite" aria-atomic="true"></span>
+				<button id="news-next" type="button" aria-controls="news-list">Next</button>
+			</nav>
 		
 		<hr>
 		<h3>Working Experience</h3>
@@ -726,27 +729,35 @@
 		<hr>
 		<h3>Professional Service</h3>
 			<ul>
+				<li>Conference Organization:
+					<ul>
+						<li>Web and App Chair, AACL 2026</li>
+						<li>Chair of Student Workshop, NLPCC 2022</li>
+					</ul>
+				</li>
+				<li>Senior Area Chair: ACL 2025, ACL 2026</li>
 			    <li>Area Chair/Senior Program Committee (SPC):
 					<ul>
+						<li>AAAI 2026 (SPC)</li>
 						<li>EMNLP 2020 (Summarization), EMNLP 2022 (Generation)</li>
 						<li>IJCAI 2021 (Summarization)</li>
-                        <li>Action Editor of ACL ARR</li>
-                        <li>EACL 2023/2024</li>
+                        <li>EACL 2023 (Generation and Summarization), EACL 2024</li>
                         <li>ACL 2023 (Dialogue & Interactive Systems)</li>
                         <li>NAACL 2024</li>
-                        <li>NLPCC 2022/2023</li>
+                        <li>NLPCC 2022 (Machine Learning for NLP), NLPCC 2023</li>
                         <li>CCL 2023</li>
 					</ul>
 				</li>
-			    <li>Associate Editor (AE):
+			    <li>Editorial Service:
 					<ul>
-						<li>Neurocomputing (2021~)</li>
+						<li>Action Editor, ACL Rolling Review (ARR) (2021)</li>
+						<li>Associate Editor, Neurocomputing (2021~)</li>
 					</ul>
 				</li>
 			    <li>Program Committee/Reviewing:
 					<ul>
-						<li>ICML, NIPS, ICLR, AAAI, IJCAI</li>
-						<li>ACL, EMNLP, NAACL, AACL, CCL, NLPCC</li>
+						<li>ICML, NIPS, ICLR, AAAI, IJCAI, KDD (2021)</li>
+						<li>ACL, EMNLP, NAACL, AACL, COLING (2020), CCL, NLPCC</li>
 						<li>SIGIR, CIKM, WSDM, CCIR</li>
 						<li>TACL, CL, TOIS, TKDE, JCST, IRJ</li>
 					</ul>				    	  
