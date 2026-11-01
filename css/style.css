@@ -25,6 +25,24 @@ h3 {
     line-height: 1.35;
 }
 
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.section-heading h3 {
+    margin: 0;
+}
+
+.section-heading > a {
+    font-size: 0.875em;
+    white-space: nowrap;
+}
+
 p {
     margin: 12px 0;
 }
